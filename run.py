@@ -1,7 +1,14 @@
 import random
 from words import wordDictionary
 
+# Access the PORT environment variable or default to 8000
+port = int(os.environ.get("PORT", 8000))
+
+# Use the 'port' variable in your code
+print(f"Using PORT: {port}")
+
 data_str = input("enter data here:\n")
+
 
 print("Let's play Hangman [] ")
 print("-------------------------------------------")
