@@ -1,6 +1,5 @@
 """
 Page to hold the random words needed for the Hangman Game.
-[] 
 """
 
 wordDictionary = [
