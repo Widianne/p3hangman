@@ -97,7 +97,7 @@ while amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_
     letterGuessed = input("\nGuess a little letter: ")
 
     # Check if the letter is correct
-    if letterGuessed == randomWord[current_guess_index]:
+    if current_guess_index < len(randomWord) and letterGuessed == randomWord[current_guess_index]:
         current_letters_guessed.append(letterGuessed)
         current_guess_index += 1
         current_letters_right = printWord(current_letters_guessed)
@@ -109,7 +109,6 @@ while amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_
         printlines()
 
 print("Game Over! Please play again! :)")
-
 
 
             
