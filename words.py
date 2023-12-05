@@ -1,3 +1,7 @@
+"""
+this page holds all the words that are in the game
+"""
+
 wordDictionary = ['advance', 'alcohol', 'aperture', 'arrangement', 'artist', 'art', 'autonomy',  
 'bubble', 'buffoon', 'butch', 'caricature', 'celebration', 'chaos', 'coke', 'cool', 'consequently', 
   'conundrum', 'corpse', 'dare', 'death', 'die', 'discomfit', 'dogma', 'enthuzimuzzy', 'escape', 
