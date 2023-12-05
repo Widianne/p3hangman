@@ -3,7 +3,7 @@ Page to hold the random words needed for the Hangman Game.
 [] 
 """
 
-word_list = [
+wordDictionary = [
   'advance', 
   'alcohol', 
   'aperture', 
