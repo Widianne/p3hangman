@@ -1,6 +1,8 @@
 import random
 from words import wordDictionary
 
+data_str = input("enter data here:\n")
+
 print("Let's play Hangman [] ")
 print("-------------------------------------------")
 
