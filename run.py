@@ -5,16 +5,12 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 
-print('')
-
-
 data_str = input("enter data here:\n")
 
 
-print("Let's play Hangman [] ")
-print("-------------------------------------------")
-
 def print_rules():
+    print("Let's play a game of Hangman!")
+    print("-------------------------------------------")
     print("Here are the rules:")
     print("1. The computer selects a random word.")
     print("2. By suggesting letters you try to guess the right word.")
@@ -24,7 +20,7 @@ def print_rules():
     print("6. You win if you guess the word before reaching the maximum incorrect guesses.")
     print("7. You lose if you run out of guesses and the hangman is fully drawn.")
  
-
+ 
 # Call the function to print the rules
 print_rules()
 
