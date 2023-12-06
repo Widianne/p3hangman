@@ -15,16 +15,15 @@ print("Let's play Hangman [] ")
 print("-------------------------------------------")
 
 def print_rules():
-    print("Welcome to Hangman!")
-    print("Rules:")
+    print("Here are the rules:")
     print("1. The computer selects a random word.")
-    print("2. You try to guess the word by suggesting letters.")
-    print("3. You have a limited number of incorrect guesses (usually 6).")
+    print("2. By suggesting letters you try to guess the right word.")
+    print("3. You can guess the incorrect letter 6 times before you die).")
     print("4. If you guess a correct letter, it is revealed in the word.")
-    print("5. If you guess an incorrect letter, a part of the hangman is drawn.")
+    print("5. For every wrong guess a part of the hangman is drawn.")
     print("6. You win if you guess the word before reaching the maximum incorrect guesses.")
     print("7. You lose if you run out of guesses and the hangman is fully drawn.")
-    print("8. Have fun and good luck!")
+ 
 
 # Call the function to print the rules
 print_rules()
