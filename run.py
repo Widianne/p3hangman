@@ -1,13 +1,33 @@
 import random
 from words import wordDictionary
 
+import colorama 
+from colorama import Fore, Back, Style
+colorama.init()
+
+print('')
+
+
 data_str = input("enter data here:\n")
 
 
 print("Let's play Hangman [] ")
 print("-------------------------------------------")
 
+def print_rules():
+    print("Welcome to Hangman!")
+    print("Rules:")
+    print("1. The computer selects a random word.")
+    print("2. You try to guess the word by suggesting letters.")
+    print("3. You have a limited number of incorrect guesses (usually 6).")
+    print("4. If you guess a correct letter, it is revealed in the word.")
+    print("5. If you guess an incorrect letter, a part of the hangman is drawn.")
+    print("6. You win if you guess the word before reaching the maximum incorrect guesses.")
+    print("7. You lose if you run out of guesses and the hangman is fully drawn.")
+    print("8. Have fun and good luck!")
 
+# Call the function to print the rules
+print_rules()
 
 
 # Choose a random word
