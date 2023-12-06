@@ -83,7 +83,7 @@ def play_game():
     Gets a random word and plays the core game loop
     """
     random_word = get_word()
-    print(random_word)
+    
     for letter in random_word:
         print("_", end=" ")
 
@@ -103,7 +103,7 @@ def play_game():
         letter_guessed = input("\nGuess a lill letter: ")
 
         if not letter_guessed.isalpha() or len(letter_guessed) > 1 or len(letter_guessed) == 0:
-            print('only one letter at a time!')
+            print('Only one letter at a time!')
             continue
 
         if current_guess_index < len(random_word) and letter_guessed == random_word[current_guess_index]:
