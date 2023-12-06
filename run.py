@@ -1,3 +1,6 @@
+"""
+imports from necessary libraries
+"""
 import random
 from words import wordDictionary
 
@@ -5,17 +8,24 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 
+"""
+the game title 
+"""
+
 print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ")
 print('''                      
- (`-').-> (`-')  _ <-. (`-')_           <-. (`-')   (`-')  _ <-. (`-')_ 
- (OO )__  (OO ).-/    \( OO) )    .->      \(OO )_  (OO ).-/    \( OO) )
-,--. ,'-' / ,---.  ,--./ ,--/  ,---(`-'),--./  ,-.) / ,---.  ,--./ ,--/ 
-|  | |  | | \ /`.\ |   \ |  | '  .-(OO )|   `.'   | | \ /`.\ |   \ |  | 
-|  `-'  | '-'|_.' ||  . '|  |)|  | .-, \|  |'.'|  | '-'|_.' ||  . '|  |)
-|  .-.  |(|  .-.  ||  |\    | |  | '.(_/|  |   |  |(|  .-.  ||  |\    | 
-|  | |  | |  | |  ||  | \   | |  '-'  | |  |   |  | |  | |  ||  | \   | 
-`--' `--' `--' `--'`--'  `--'  `-----'  `--'   `--' `--' `--'`--'  `--'                                                   
+████████╗██╗  ██╗███████╗    ██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
+╚══██╔══╝██║  ██║██╔════╝    ██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
+   ██║   ███████║█████╗      ███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║
+   ██║   ██╔══██║██╔══╝      ██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║
+   ██║   ██║  ██║███████╗    ██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║
+   ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝                    
       ''')
+
+"""
+the rules of the game
+"""
+
 def print_rules():
     print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ \n")
     print("Let's play! Here are the rules:")
@@ -27,16 +37,21 @@ def print_rules():
     print("6. You win if you guess the word before reaching the maximum incorrect guesses.")
     print("7. You lose if you run out of guesses and the hangman is fully drawn.\n")
     print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ \n")
-
-# Call the function to print the rules
+# call the function to print the rules
 print_rules()
 
-  
-# Choose a random word
+"""
+the acctual game
+"""
+# chooses a random word
 randomWord = random.choice(wordDictionary)
 
 for letter in randomWord:
     print("_", end=" ")
+    
+"""
+hang man img code that builds the hanged man with every wrong guess, 6 trys until game over
+"""
 
 def print_hangman(wrong):
     if wrong == 0:
@@ -82,6 +97,11 @@ def print_hangman(wrong):
         print("/ \\  |")
         print("    ===")
 
+"""
+this function takes the list of guessed letters and prints the characters of a randomly chosen word, 
+revealing guessed letters and hiding the unguessed ones. The function returns the count of 
+correctly guessed letters.
+"""
 def printWord(guessedLetters):
     counter = 0
     rightLetters = 0
@@ -94,17 +114,28 @@ def printWord(guessedLetters):
         counter += 1
     return rightLetters
 
+"""
+displays a visual representation of the word, where each letter is represented by a horizontal line
+"""
 def printlines():
     print("\r")
     for char in randomWord:
         print("\u203E", end=" ")
 
+"""
+tracks the length of the word, incorrect guesses, current guess index, guessed letters, 
+and the count of correct letters guessed
+"""
 length_of_word_to_guess = len(randomWord)
 amount_of_times_wrong = 0
 current_guess_index = 0
 current_letters_guessed = []
 current_letters_right = 0
 
+"""
+prints the guessed letters, prompts the user to guess, stores input in the variable letterGuessed. 
+loop continues until either the player makes 6 incorrect guesses or correctly guesses all letters
+"""
 while amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_guess:
     print("\nGuessed letters: ")
     for letter in current_letters_guessed:
@@ -125,7 +156,16 @@ while amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_
         current_letters_right = printWord(current_letters_guessed)
         printlines()
 
-print("\nLol game gver! :)))")
+print('''
+                                                  (`-')  _ <-. (`-')   (`-')  _                     (`-') (`-')  _   (`-')  
+   <-.        .->      <-.           .->    (OO ).-/    \(OO )_  ( OO).-/         .->        _(OO ) ( OO).-/<-.(OO )  
+ ,--. )  (`-')----.  ,--. )       ,---(`-') / ,---.  ,--./  ,-.)(,------.    (`-')----. ,--.(_/,-.\(,------.,------,) 
+ |  (`-')( OO).-.  ' |  (`-')    '  .-(OO ) | \ /`.\ |   `.'   | |  .---'    ( OO).-.  '\   \ / (_/ |  .---'|   /`. ' 
+ |  |OO )( _) | |  | |  |OO )    |  | .-, \ '-'|_.' ||  |'.'|  |(|  '--.     ( _) | |  | \   /   / (|  '--. |  |_.' | 
+(|  '__ | \|  |)|  |(|  '__ |    |  | '.(_/(|  .-.  ||  |   |  | |  .--'      \|  |)|  |_ \     /_) |  .--' |  .   .' 
+ |     |'  '  '-'  ' |     |'    |  '-'  |  |  | |  ||  |   |  | |  `---.      '  '-'  '\-'\   /    |  `---.|  |\  \  
+ `-----'    `-----'  `-----'      `-----'   `--' `--'`--'   `--' `------'       `-----'     `-'     `------'`--' '--' 
+      ''')
 
 
             
