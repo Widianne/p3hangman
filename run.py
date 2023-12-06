@@ -5,7 +5,7 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 
-print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦  ")
+print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ")
 print('''                        
  _/\/\____/\/\_____________________________________________________________________________
     _/\/\____/\/\__/\/\/\______/\/\/\/\______/\/\/\/\__/\/\/\__/\/\____/\/\/\______/\/\/\/\___ 
@@ -15,17 +15,16 @@ print('''
 _______________________________________/\/\/\/\___________________________________________       
       ''')
 def print_rules():
-    print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦  ")
+    print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ \n")
     print("Let's play! Here are the rules:")
-    print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦  ")
-    print("1. The computer selects a random word.")
+    print("1. The computer selects a random from a secret list of words.")
     print("2. By suggesting letters you try to guess the right word.")
     print("3. You can guess the incorrect letter 6 times before you die).")
     print("4. If you guess a correct letter, it is revealed in the word.")
     print("5. For every wrong guess a part of the hangman is drawn.")
     print("6. You win if you guess the word before reaching the maximum incorrect guesses.")
-    print("7. You lose if you run out of guesses and the hangman is fully drawn.")
-    print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦  \n")
+    print("7. You lose if you run out of guesses and the hangman is fully drawn.\n")
+    print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ \n")
  
  
 # Call the function to print the rules
