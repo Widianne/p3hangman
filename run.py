@@ -104,20 +104,14 @@ def play_game():
             print('Only one letter at a time!')
             continue
 
-        if current_guess_index < len(random_word) and letter_guessed == random_word[current_guess_index]:
+        if  current_guess_index < len(random_word) and letter_guessed == random_word[current_guess_index]:
             current_letters_guessed.append(letter_guessed)
             current_guess_index += 1
             current_letters_right = print_word(
                 current_letters_guessed, random_word)
             print_lines(random_word)
-            print("""
-       _                    _ _                    _       
-      | |                  | | |                  (_)      
-  ___ | |__   __      _____| | |  _   _  __      ___ _ __  
- / _ \| '_ \  \ \ /\ / / _ \ | | | | | | \ \ /\ / / | '_ \ 
-| (_) | | | |  \ V  V /  __/ | | | |_| |  \ V  V /| | | | |
- \___/|_| |_|   \_/\_/ \___|_|_|  \__,_|   \_/\_/ |_|_| |_|
-                  """)
+    
+            
         else:
             amount_of_times_wrong += 1
             print_hangman(amount_of_times_wrong)
@@ -125,7 +119,10 @@ def play_game():
             current_letters_right = print_word(
                 current_letters_guessed, random_word)
             print_lines(random_word)
-
+            
+    if current_letters_right == length_of_word_to_guess:
+        print("Good job! You guessed the word. You get a potato!")
+        
     print("""
                                                   (`-')  _ <-. (`-')   (`-')  _                     (`-') (`-')  _   (`-')  
    <-.        .->      <-.           .->    (OO ).-/    \(OO )_  ( OO).-/         .->        _(OO ) ( OO).-/<-.(OO )  
@@ -136,6 +133,9 @@ def play_game():
  |     |'  '  '-'  ' |     |'    |  '-'  |  |  | |  ||  |   |  | |  `---.      '  '-'  '\-'\   /    |  `---.|  |\  \  
  `-----'    `-----'  `-----'      `-----'   `--' `--'`--'   `--' `------'       `-----'     `-'     `------'`--' '--' 
       """)
+    
+    
+             
     
     restart = input('press Y to restart')
     if restart.lower() == 'y':
