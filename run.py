@@ -6,16 +6,15 @@ from colorama import Fore, Back, Style
 colorama.init()
 
 print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ")
-print('''                        
-          )                                          
- ( /(                                          
- )\())    )         (  (     )       )         
-((_)\  ( /(   (     )\))(   (     ( /(   (     
- _((_) )(_))  )\ ) ((_))\   )\  ' )(_))  )\ )  
-| || |((_)_  _(_/(  (()(_)_((_)) ((_)_  _(_/(  
-| __ |/ _` || ' \))/ _` || '  \()/ _` || ' \)) 
-|_||_|\__,_||_||_| \__, ||_|_|_| \__,_||_||_|  
-                   |___/                                                              
+print('''                      
+ (`-').-> (`-')  _ <-. (`-')_           <-. (`-')   (`-')  _ <-. (`-')_ 
+ (OO )__  (OO ).-/    \( OO) )    .->      \(OO )_  (OO ).-/    \( OO) )
+,--. ,'-' / ,---.  ,--./ ,--/  ,---(`-'),--./  ,-.) / ,---.  ,--./ ,--/ 
+|  | |  | | \ /`.\ |   \ |  | '  .-(OO )|   `.'   | | \ /`.\ |   \ |  | 
+|  `-'  | '-'|_.' ||  . '|  |)|  | .-, \|  |'.'|  | '-'|_.' ||  . '|  |)
+|  .-.  |(|  .-.  ||  |\    | |  | '.(_/|  |   |  |(|  .-.  ||  |\    | 
+|  | |  | |  | |  ||  | \   | |  '-'  | |  |   |  | |  | |  ||  | \   | 
+`--' `--' `--' `--'`--'  `--'  `-----'  `--'   `--' `--' `--'`--'  `--'                                                   
       ''')
 def print_rules():
     print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ \n")
@@ -28,11 +27,10 @@ def print_rules():
     print("6. You win if you guess the word before reaching the maximum incorrect guesses.")
     print("7. You lose if you run out of guesses and the hangman is fully drawn.\n")
     print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ \n")
- 
- 
-# Call the function to print the rules
-print_rules()
-
+    # Call the function to print the rules
+    print_rules()
+    
+  
 
 # Choose a random word
 randomWord = random.choice(wordDictionary)
@@ -108,12 +106,12 @@ current_letters_guessed = []
 current_letters_right = 0
 
 while amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_guess:
-    print("\nLetters guessed so far: ")
+    print("\nGuessed letters: ")
     for letter in current_letters_guessed:
         print(letter, end=" ")
 
     # Prompt user for input
-    letterGuessed = input("\nGuess a little letter: ")
+    letterGuessed = input("\nGuess a lill letter: ")
 
     # Check if the letter is correct
     if current_guess_index < len(randomWord) and letterGuessed == randomWord[current_guess_index]:
