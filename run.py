@@ -1,4 +1,12 @@
 """
+to-do list
+- winning thing
+- exit thing 
+- readme lol
+- rewuiermets thing
+"""
+
+"""
 imports from necessary libraries
 """
 import random
