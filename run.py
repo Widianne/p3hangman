@@ -32,13 +32,6 @@ def print_rules():
 print_rules()
 
   
-
-
- 
-
-    
-  
-
 # Choose a random word
 randomWord = random.choice(wordDictionary)
 
@@ -132,7 +125,7 @@ while amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_
         current_letters_right = printWord(current_letters_guessed)
         printlines()
 
-print("Game Over! Play again ! :)")
+print("\nLol game gver! :)))")
 
 
             
