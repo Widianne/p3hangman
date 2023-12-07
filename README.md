@@ -1,8 +1,10 @@
-## Hang mangame 
+## Hangman game
 
-Welcome,
+This is my third project among five, where I've crafted a Hangman game to deepen my understanding of Python. Staying true to the traditional rules, the game features a distinctive touch with words and styling that reflects my playful and quirky side, emphasizing my fascination with slightly unusual, old words.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+github: https://github.com/Widianne/p3hangman.git
+
+live page: 
 
 ## Reminders
 
