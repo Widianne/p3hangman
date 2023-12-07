@@ -1,4 +1,4 @@
-Hang man 
+## Hang mangame 
 
 Welcome,
 
