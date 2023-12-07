@@ -23,7 +23,7 @@ print('''
 
 def print_rules():
     """
-    Prints the rules
+    prints the rules
     """
     print("✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ ✧.* ˚ ✦ \n")
     print("Let's play! Here are the rules:")
@@ -46,14 +46,14 @@ the actual game
 
 def get_word():
     """
-    Gets a random word
+    gets a random word
     """
     return random.choice(wordDictionary)
 
 
 def print_word(guessed_letters, random_word):
     """
-    Prints the word
+    prints the word
     """
     counter = 0
     right_letters = 0
@@ -69,7 +69,7 @@ def print_word(guessed_letters, random_word):
 
 def print_lines(random_word):
     """
-    Prints lines for word
+    prints lines for word
     """
     print("\r")
     for char in random_word:
@@ -78,7 +78,7 @@ def print_lines(random_word):
 
 def play_game():
     """
-    Gets a random word and plays the core game loop
+    gets a random word and plays the core game loop
     """
     random_word = get_word()
     
@@ -97,7 +97,7 @@ def play_game():
             print(letter, end=" ")
         
 
-        # Prompt user for input
+        # prompt user for input
         letter_guessed = input("\nGuess a lill letter: ")
 
         if not letter_guessed.isalpha() or len(letter_guessed) > 1 or len(letter_guessed) == 0:
@@ -134,7 +134,7 @@ def play_game():
   
               """)
        
-        # Check if the game is not over due to winning
+        # check if the game is not over due to winning
     if current_letters_right != length_of_word_to_guess: 
         print("""
                                                   (`-')  _ <-. (`-')   (`-')  _                     (`-') (`-')  _   (`-')  
