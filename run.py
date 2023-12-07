@@ -136,7 +136,7 @@ def play_game():
        
         # Check if the game is not over due to winning
     if current_letters_right != length_of_word_to_guess: 
-        print(Fore.GREEN +"""
+        print("""
                                                   (`-')  _ <-. (`-')   (`-')  _                     (`-') (`-')  _   (`-')  
    <-.        .->      <-.           .->    (OO ).-/    \(OO )_  ( OO).-/         .->        _(OO ) ( OO).-/<-.(OO )  
  ,--. )  (`-')----.  ,--. )       ,---(`-') / ,---.  ,--./  ,-.)(,------.    (`-')----. ,--.(_/,-.\(,------.,------,) 
@@ -153,6 +153,7 @@ def play_game():
     restart = input('press Y to restart')
     if restart.lower() == 'y':
         play_game()
+    
 
 
 def print_hangman(wrong):
@@ -201,14 +202,3 @@ def print_hangman(wrong):
         print("/|\\  |")
         print("/ \\  |")
         print("    ===")
-
-
-def main():
-    """
-    initial game build
-    """
-    print_rules()
-    play_game()
-
-
-main()
