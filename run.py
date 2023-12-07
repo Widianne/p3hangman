@@ -122,8 +122,10 @@ def play_game():
             
     if current_letters_right == length_of_word_to_guess:
         print("Good job! You guessed the word. You get a potato!")
-        
-    print("""
+       
+        # Check if the game is not over due to winning
+    if current_letters_right != length_of_word_to_guess: 
+        print("""
                                                   (`-')  _ <-. (`-')   (`-')  _                     (`-') (`-')  _   (`-')  
    <-.        .->      <-.           .->    (OO ).-/    \(OO )_  ( OO).-/         .->        _(OO ) ( OO).-/<-.(OO )  
  ,--. )  (`-')----.  ,--. )       ,---(`-') / ,---.  ,--./  ,-.)(,------.    (`-')----. ,--.(_/,-.\(,------.,------,) 
