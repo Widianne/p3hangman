@@ -202,3 +202,12 @@ def print_hangman(wrong):
         print("/|\\  |")
         print("/ \\  |")
         print("    ===")
+
+
+def main():
+    
+    print_rules()
+    play_game()
+
+
+main()
